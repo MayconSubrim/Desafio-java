@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var entrada = parseInt(prompt("Digite 1 se for mulher, e 2 se for homem: "))
+        if(entrada == 1){
+            var alturaF = parseFloat(prompt("digite agora a sua altura: "))
+            var IMC = (62.1 * alturaF) -44.7
+            alert("Seu peso ideal é: " + IMC)
+        }
+        else if(entrada == 2){
+            var alturaM = parseFloat(prompt("digite agora a sua altura: "))
+            var IMC = (72.7 * alturaM) -58
+            alert("Seu peso ideal é: " + IMC)
+        }
+        else{
+            alert("tente novamente!")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

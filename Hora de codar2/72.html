@@ -12,9 +12,29 @@
         var numero4 = parseFloat(prompt("digite um valor: "))
         var numero5 = parseFloat(prompt("digite um valor: "))
         var numero6 = parseFloat(prompt("digite um valor: "))
-        if (numero1 <= 72 && numero2 <= 72 && numero3 <= 72 && numero4 <= 72 && numero5 <= 72 && numero6 <= 72) {
-            alert(numero1 + numero2 + numero3 + numero4 + numero5 + numero6)
+        var acumula = 0
+
+        if(numero1 < 72 ){
+            acumula += numero1;
         }
+        if(numero2 < 72 ){
+            acumula += numero2;
+        }
+        if(numero3 < 72 ){
+            acumula += numero3;
+        }
+        if(numero4 < 72 ){
+            acumula += numero4;
+        }
+        if(numero5 < 72 ){
+            acumula += numero5;
+        }
+        if(numero6 < 72 ){
+            acumula += numero6;
+        }
+
+        alert("A soma é: " + acumula + " E os numeros digitados foram: " + numero1 + " " + numero2 + " " + numero3 + " " + numero4 + " " + numero5 + " " + numero6)
+        
     </script>
 </head>
 <body>

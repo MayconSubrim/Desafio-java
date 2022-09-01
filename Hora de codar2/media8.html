@@ -6,21 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var numero1 = parseFloat(prompt("digite um valor: "))
-        var numero2 = parseFloat(prompt("digite um valor: "))
-        var numero3 = parseFloat(prompt("digite um valor: "))
-        var numero4 = parseFloat(prompt("digite um valor: "))
-        var numero5 = parseFloat(prompt("digite um valor: "))
-        var numero6 = parseFloat(prompt("digite um valor: "))
+        var acumula = 0
+        function sair(){
+            var sim = confirm("quer mesmo sair?")
 
-        if(numero1 > 0 && numero1 < 10 && numero2 > 0 && numero2 < 10 && numero3 > 0 && numero3 < 10 &&numero4 > 0 && numero4 < 10 &&numero5 > 0 && numero5 < 10 &&numero6 > 0 && numero6 < 10){
-            var media = (numero1 + numero2 + numero3 +numero4 + numero5 + numero6) / 6
-            alert("A média é: " + media)
+                if(sim){
+                    window.close();
+                }
+                else{
+                    inicio();
+                }
+            
         }
-        else{
-            alert("tente novamente")
+        function inicio (){
+            var entrada = parseInt(prompt("para começar a soma de medias digite 1, ou 2 para sair"))
+            if(isNaN(entrada)){
+                alert("tente novamente")
+                inicio();
+            }
+
+            else if(entrada == 1){
+                media();
+            }
+            else if(entrada == 2){
+                sair();
+            }
+            else{
+                alert("escolha uma opção valida!")
+                inicio();
+            }
+         
         }
-       
+
+        function media (){
+        var numero1 = parseFloat(prompt("digite um valor: "))
+            if(numero1 <= 10 && numero1 > 0){
+                acumula += numero1
+            }
+            else{
+                alert("numero invalido")
+                inicio();
+            }
+        var numero2 = parseFloat(prompt("digite um valor: "))
+        if(numero2 <= 10 && numero2 > 0){
+                acumula += numero2
+            }
+            else{
+                alert("numero invalido")
+                inicio();
+            }
+        var numero3 = parseFloat(prompt("digite um valor: "))
+        if(numero3 <= 10 && numero3 > 0){
+                acumula += numero3
+            }
+            else{
+                alert("numero invalido")
+                inicio();
+            }
+        var numero4 = parseFloat(prompt("digite um valor: "))
+        if(numero4 <= 10 && numero4 > 0){
+                acumula += numero4
+            }
+            else{
+                alert("numero invalido")
+                inicio();
+            }
+
+            acumula = acumula / 4
+            if(acumula >= 5 ){
+            alert("parabens! voce passou no teste" + " a suma media é: " + acumula)
+            acumula = 0;
+            }
+
+            else{
+                alert("infelizmente voce não passou, tente novamente")
+                acumula = 0;
+                inicio();
+            }
+
+            inicio();
+
+        }
+        inicio()
     </script>
 </head>
 <body>

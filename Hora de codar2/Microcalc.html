@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inicio(){
+            var entrada = parseInt(prompt("digite: 1.Adição, 2.Subtração, 3.Divisão, 4.Multiplicação"))
+            if(isNaN(entrada)){
+                alert("digite um numero valido!")
+                inicio();
+            }
+            else if(entrada == 1){
+                adicao();
+            }
+            else if(entrada == 2){
+                subtracao();
+            }
+            else if(entrada == 3){
+                divisao();
+            }
+            else if(entrada == 4){
+                multiplicacao();
+            }
+            else{
+                alert("digite uma opção valida!")
+                inicio();
+            }
+        }
+
+        function adicao(){
+            var int1 = parseInt(prompt("digite o primeiro valor:"));
+            var int2 = parseInt(prompt("digite o segundo valor:"));
+            var resultado = int1 + int2;
+            alert("O resultado da Soma é: " + resultado)
+            inicio();
+        }
+
+        function subtracao(){
+            var int1 = parseInt(prompt("digite o primeiro valor:"));
+            var int2 = parseInt(prompt("digite o segundo valor:"));
+            var resultado = int1 - int2;
+            alert("O resultado da Soma é: " + resultado)
+            inicio();
+        }
+
+        function divisao(){
+            var int1 = parseInt(prompt("digite o primeiro valor:"));
+            var int2 = parseInt(prompt("digite o segundo valor:"));
+            var resultado = int1 / int2;
+            alert("O resultado da Soma é: " + resultado)
+            inicio();
+        }
+
+        function multiplicacao(){
+            var int1 = parseInt(prompt("digite o primeiro valor:"));
+            var int2 = parseInt(prompt("digite o segundo valor:"));
+            var resultado = int1 * int2;
+            alert("O resultado da Soma é: " + resultado)
+            inicio();
+        }
+
+        inicio();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

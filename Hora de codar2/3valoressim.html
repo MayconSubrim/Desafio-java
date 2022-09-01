@@ -9,14 +9,17 @@
         var numero = parseInt(prompt("Digite um valor:"));
         var numero1 = parseInt(prompt("Digite um outro valor valor:"));
         var numero2 = parseInt(prompt("digite mais um valor diferente:"))
-        if(numero && numero1 > numero2){
-            alert(numero + numero1 )
+        if(numero > numero2 && numero1 > numero2){
+            var resultado = numero + numero1
+            alert("A soma dos 2 maiore é: " + resultado )
         }
-        else if (numero1 && numero2 > numero){
-            alert(numero1 + numero2)
+        else if (numero1 > numero && numero2 > numero){
+            var resultado1 = numero1 + numero2;
+            alert("A soma dos 2 maiore é: " + resultado1)
         }
-        else if(numero2 && numero > numero1){
-            alert(numero2 + numero)
+        else if(numero2 > numero1 && numero > numero1){
+            var resultado2 = numero2 + numero
+            alert("A soma dos 2 maiore é: " + resultado2)
         }
 
 
