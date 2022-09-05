@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total. Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário.  */
+
+
+        var acum = 0
+        var nosta = []
+        var nota = 0
+
+        function medialuno() {
+            for (let i = 0; i < 6; i++) {
+                nosta.push(nota = parseInt(prompt("digite uma nota: ")))
+                if (nota >= 0 && nota <= 10) {
+                    acum += nosta[i]
+                    console.log(acum)
+                }
+                else {
+                    alert("digite um valor valido (0 a 10)!!")
+                    nosta = []
+                    i = 7
+                    acum = 0
+                    medialuno()
+                    
+                }
+            }
+            var media = acum / 6
+            alert("A sua média é: " + media)
+            medialuno()
+        }
+
+        medialuno()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
