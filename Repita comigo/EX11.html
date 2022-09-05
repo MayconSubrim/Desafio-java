@@ -7,12 +7,12 @@
     <title>Document</title>
     <script>
     /* Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.*/
-        var dentro = 2;
+        var dentro = 0;
         var fora = 0;
 
         for (let i = 0; i < 10; i++) {
             var numero = parseInt(prompt("insira um valor"))
-            if (numero < 42 && numero > 24) {
+            if (numero <= 42 && numero >= 24) {
                 dentro ++ 
             }
             else{
@@ -20,7 +20,7 @@
             }
         }
 
-        alert("Os valores que estão dentro estão dentro: " + dentro + " e temos " + fora + " do intervalo")
+        alert("Os valores que estão dentro estão dentro do intervalo são: " + dentro + ", e temos " + fora + " fora do intervalo")
 
     
     </script>
